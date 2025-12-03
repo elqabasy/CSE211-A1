@@ -1,0 +1,131 @@
+{
+  "name": "CSE211-A1 Backlog & Workflow",
+  "description": "Feature backlog for CSE211 Assignment 1 with pre-linked Issues for automation",
+  "columns": [
+    {
+      "name": "Backlog",
+      "cards": [
+        {
+          "content": {
+            "issue_url": "https://github.com/elqabasy/CSE211-A1/issues/1",
+            "title": "FEAT-001: Project Structure",
+            "priority": "High",
+            "branch": "feature/project-structure"
+          }
+        },
+        {
+          "content": {
+            "issue_url": "https://github.com/elqabasy/CSE211-A1/issues/2",
+            "title": "FEAT-002: Homepage",
+            "priority": "High",
+            "branch": "feature/homepage"
+          }
+        },
+        {
+          "content": {
+            "issue_url": "https://github.com/elqabasy/CSE211-A1/issues/3",
+            "title": "FEAT-003: About Page",
+            "priority": "Medium",
+            "branch": "feature/about-page"
+          }
+        },
+        {
+          "content": {
+            "issue_url": "https://github.com/elqabasy/CSE211-A1/issues/4",
+            "title": "FEAT-004: Contact Page",
+            "priority": "Medium",
+            "branch": "feature/contact-page"
+          }
+        },
+        {
+          "content": {
+            "issue_url": "https://github.com/elqabasy/CSE211-A1/issues/5",
+            "title": "FEAT-005: Registration Form",
+            "priority": "High",
+            "branch": "feature/registration-form"
+          }
+        },
+        {
+          "content": {
+            "issue_url": "https://github.com/elqabasy/CSE211-A1/issues/6",
+            "title": "FEAT-006: Course Catalog",
+            "priority": "High",
+            "branch": "feature/course-catalog"
+          }
+        },
+        {
+          "content": {
+            "issue_url": "https://github.com/elqabasy/CSE211-A1/issues/7",
+            "title": "FEAT-007: Course Detail",
+            "priority": "High",
+            "branch": "feature/course-detail"
+          }
+        },
+        {
+          "content": {
+            "issue_url": "https://github.com/elqabasy/CSE211-A1/issues/8",
+            "title": "FEAT-008: Student Dashboard",
+            "priority": "Medium",
+            "branch": "feature/student-dashboard"
+          }
+        },
+        {
+          "content": {
+            "issue_url": "https://github.com/elqabasy/CSE211-A1/issues/9",
+            "title": "FEAT-009: Thank You Page",
+            "priority": "Medium",
+            "branch": "feature/thank-you-page"
+          }
+        },
+        {
+          "content": {
+            "issue_url": "https://github.com/elqabasy/CSE211-A1/issues/10",
+            "title": "FEAT-010: Calculator",
+            "priority": "Medium",
+            "branch": "feature/calculator"
+          }
+        },
+        {
+          "content": {
+            "issue_url": "https://github.com/elqabasy/CSE211-A1/issues/11",
+            "title": "FEAT-011: CSS & JS",
+            "priority": "Medium",
+            "branch": "feature/css-js"
+          }
+        },
+        {
+          "content": {
+            "issue_url": "https://github.com/elqabasy/CSE211-A1/issues/12",
+            "title": "FEAT-012: Performance & Validation",
+            "priority": "Medium",
+            "branch": "feature/performance-optimization"
+          }
+        },
+        {
+          "content": {
+            "issue_url": "https://github.com/elqabasy/CSE211-A1/issues/13",
+            "title": "FEAT-013: Documentation",
+            "priority": "Low",
+            "branch": "feature/documentation"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ready / To Do",
+      "cards": []
+    },
+    {
+      "name": "In Progress",
+      "cards": []
+    },
+    {
+      "name": "In Review",
+      "cards": []
+    },
+    {
+      "name": "Done",
+      "cards": []
+    }
+  ]
+}
