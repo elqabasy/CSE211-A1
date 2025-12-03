@@ -3,47 +3,25 @@ name: Deploy Static Site to GitHub Pages
 on:
   push:
     branches:
-      - main # deploy only when main is updated
+      - main # Trigger only when main is updated
 
 permissions:
-  contents: write # allow pushing to gh-pages
+  contents: write # Allow pushing to gh-pages branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
+      # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Deploy all files to gh-pages branch
+      # Step 2: Deploy all files to gh-pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./ # Root folder, everything will be deployed
+          publish_dir: ./ # Deploy the entire repo root
           publish_branch: gh-pages
-          keep_files: false # Remove old files first
-
-      # Step 3 (optional): Create a release of the deployed site
-      - name: Create GitHub Release
-        id: create_release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: gh-pages-v${{ github.run_number }}
-          name: "Release v${{ github.run_number }}"
-          draft: false
-          prerelease: false
-          generate_release_notes: true
-
-      # Step 4 (optional): Upload all repo files as release asset
-      - name: Upload repo files as ZIP
-        run: zip -r EduConnect-gh-pages.zip . -x ".git/*" ".github/*"
-      - name: Upload ZIP to release
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./EduConnect-gh-pages.zip
-          asset_name: EduConnect-gh-pages.zip
-          asset_content_type: application/zip
+          keep_files: false # Clear old files before deploying
