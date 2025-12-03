@@ -49,13 +49,3 @@ jobs:
           draft: false
           prerelease: false
           generate_release_notes: true
-
-      # Step 6: Upload the ZIP as release asset
-      - name: Upload GH Pages ZIP
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./EduConnect-gh-pages.zip
-          asset_name: EduConnect-gh-pages.zip
-          asset_content_type: application/zip
-          github_token: ${{ secrets.GITHUB_TOKEN }}
