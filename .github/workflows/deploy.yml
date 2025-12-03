@@ -59,3 +59,4 @@ jobs:
           asset_path: ./EduConnect-gh-pages.zip
           asset_name: EduConnect-gh-pages.zip
           asset_content_type: application/zip
+          github_token: ${{ secrets.GITHUB_TOKEN }}
