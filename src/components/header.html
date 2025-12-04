@@ -1,57 +1,36 @@
+<!-- @mahros -->
+<!-- Q? If you can make the <header> and <breadcrumb> sticky, do it! -->
+
+
+
 <!-- Header Component - header.html -->
 <header>
-  <div class="container">
+  <div class="container"
+    style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; justify-items: left;">
     <div class="logo-section">
       <h1>
         EduConnect
-        <div class="header-subtitle">Student Academic Portal</div>
       </h1>
+      <p class="header-subtitle">Your Gateway to Academic Excellence</p>
     </div>
-    <div>
-
-      <nav id="navbar">
-        <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="courses.html" class="nav-link">Courses</a></li>
-          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    <!-- <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-      <span>☰</span>
-    </button> -->
+    <nav>
+      <ul>
+        <!-- Home
+          About Us
+          Course Catalog
+          Course Details
+          Student Dashboard
+          Registration
+          Contact Me
+          University Website -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/about.html">About Us</a></li>
+        <li><a href="pages/course-catalog.html">Browse Courses</a></li>
+        <li><a href="pages/course-detail.html">Course Details</a></li>
+        <li><a href="pages/dashboard.html">Student Dashboard</a></li>
+        <li><a href="pages/registration.html">Registration</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="https://www.educonnect.edu.eg/">University Website</a></li>
+      </ul>
   </div>
 </header>
-
-<script>
-  // Mobile menu toggle
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.getElementById('menuToggle');
-    const navbar = document.getElementById('navbar');
-
-    if (menuToggle && navbar) {
-      menuToggle.addEventListener('click', function () {
-        navbar.classList.toggle('active');
-      });
-
-      // Close menu when a link is clicked
-      const navLinks = navbar.querySelectorAll('a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function () {
-          navbar.classList.remove('active');
-        });
-      });
-
-      // Set active nav link based on current page
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-          link.classList.add('active');
-        }
-      });
-    }
-  });
-</script>
