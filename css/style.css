@@ -59,6 +59,13 @@ nav ul {
   justify-content: space-between;
 }
 
+nav ul.column {
+  /* @mahros */
+  /* NOTE: Created specially for .cards that has quick links vertically */
+  gap: 3px;
+  flex-direction: column;
+}
+
 nav a {
   color: white;
   text-decoration: none;
@@ -102,6 +109,15 @@ nav a {
 
 .breadcrumb-list span {
   color: #333;
+}
+
+
+.b-slash::before {
+  /* @mahros */
+  /* NOTE: Chnaging the contet will change BREADCRUMB SEPARATOR: [/, >] */
+  /* content: ">"; */
+  content: "/";
+  color: rgb(255, 106, 0);
 }
 
 /* ============================================
@@ -186,6 +202,10 @@ footer li a {
   /* border-radius: 8px; */
   padding: 24px;
   transition: all 0.3s ease;
+}
+
+.card a {
+  color: black;
 }
 
 .card:hover {
@@ -637,4 +657,22 @@ DIVIDERS
   height: 1px;
   background: #ddd;
   margin: 24px 0;
+}
+
+
+
+/* =========================================================
+SPACERS
+========================================================= */
+
+.space-sm {
+  height: 12px;
+}
+
+.space-md {
+  height: 24px;
+}
+
+.space-lg {
+  height: 48px;
 }

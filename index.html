@@ -2,9 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+
+  <!-- Title -->
+  <title>EduConnect - Home</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -28,10 +34,13 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Browse Courses</a></li>
-          <li><a href="dashboard.html">Student Dashboard</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/course-catalog.html">Browse Courses</a></li>
+          <li><a href="pages/course-detail.html">Course Details</a></li>
+          <li><a href="pages/dashboard.html">Student Dashboard</a></li>
+          <li><a href="pages/registration.html">Registration</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="https://www.educonnect.edu.eg/">University Website</a></li>
         </ul>
     </div>
   </header>
@@ -44,16 +53,8 @@
     <div class="container">
       <ul class="breadcrumb-list" role="navigation" aria-label="Breadcrumb">
         <li>
-          <a href="index.html">Home</a>
+          <a href="/">Home</a>
         </li>
-        <!-- @mahros -->
-        <!-- keep this commented, if there is no nested -->
-        <!-- <li>
-          <span>></span>
-        </li> -->
-        <!-- <li> -->
-        <!-- <span id="breadcrumb-current"></span> -->
-        <!-- </li> -->
       </ul>
     </div>
   </div>
@@ -66,7 +67,6 @@
   <main style="padding-top: 25px;">
     <div class="container">
       <div class="two-column">
-
 
         <!-- main.column -->
         <article>
@@ -98,13 +98,14 @@
               <p>Learn the fundamentals of programming and computational thinking.</p>
               <p>Instructor: Dr. Samy</p>
               <p>Duration: 12 weeks</p>
-              <a href="#/course/1" data-discover="true">
+              <a href="pages/course-detail.html" data-discover="true">
                 <button>
                   View Details
                 </button>
               </a>
             </article>
           </section>
+
           <section>
             <p>Featured Courses</p>
             <article class="card">
@@ -126,6 +127,7 @@
               </a>
             </article>
           </section>
+
           <section>
             <p>Featured Courses</p>
             <article class="card">
@@ -174,7 +176,64 @@
 
 
         </article>
-        <div style="background-color: red;">right</div>
+
+
+        <!-- side.column -->
+        <article>
+          <section class="card">
+            <h5>Search Courses</h5>
+
+            <!-- @mahros -->
+            <!-- NOTE: DON'T forgot to handle this form -->
+            <form>
+              <input type="text" placeholder="Search for courses..." />
+              <div class="space-sm"></div>
+              <button type="submit">Search</button>
+            </form>
+
+
+            <!-- @mahros -->
+          </section>
+
+          <section class="card">
+            <h4>Quick Links</h4>
+            <nav>
+              <ul class="column">
+                <li>
+                  <a href="pages/course-detail.html">Browse All Courses</a>
+                </li>
+                <li>
+                  <a href="pages/registration.html">Enroll Now</a>
+                </li>
+                <li>
+                  <a href="pages/student-dashboard.html">My Dashboard</a>
+                </li>
+                <li>
+                  <a href="pages/about.html">About Platform</a>
+                </li>
+                <li>
+                  <a href="pages/contact.html">Contact Support</a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+
+          <!-- NEWS SECTION -->
+          <section class="card">
+            <h6>Latest News</h6>
+            <p>New AI and Machine Learning course launching next month! | Registration deadline extended to January 31st
+              | Winter
+              break: December 20 - January 5</p>
+          </section>
+
+
+          <!-- SPECIAL OFFER | ADS SECTION -->
+          <section class="card">
+            <h5>Special Offer</h5>
+            <article class="card">Get 20% off on all courses! Use code EDU20 at checkout. Limited time only.</article>
+          </section>
+        </article>
+
       </div>
     </div>
   </main>
@@ -198,11 +257,11 @@
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Browse Courses</a></li>
-          <li><a href="dashboard.html">Student Dashboard</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="pages/index.html">Home</a></li>
+          <li><a href="pages/courses.html">Browse Courses</a></li>
+          <li><a href="pages/dashboard.html">Student Dashboard</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
         </ul>
       </div>
 
@@ -210,7 +269,7 @@
       <div class="footer-section">
         <h3>Support</h3>
         <ul>
-          <li><a href="contact.html">Help & Support</a></li>
+          <li><a href="pages/contact.html">Help & Support</a></li>
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Terms of Service</a></li>
           <li><a href="#">Accessibility</a></li>
@@ -223,11 +282,11 @@
         <h3>Contact Us</h3>
         <p>
           <strong>Email:</strong><br>
-          <a href="mailto:support@educonnect.edu">support@educonnect.edu</a>
+          <a href="mailto:support@EduConnect.edu.eg">support@EduConnect.edu.eg</a>
         </p>
         <p>
           <strong>Phone:</strong><br>
-          <a href="tel:+1234567890">+1 (234) 567-890</a>
+          <a href="tel:+201015888272">+20 1015888272</a>
         </p>
         <p>
           <strong>Office Hours:</strong><br>
