@@ -1,0 +1,640 @@
+/* ============================================
+   COMPONENT STYLES - style.css
+   ============================================ */
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+header {
+  background-color: #1a3a5c;
+  color: white;
+  padding: 20px 0;
+  border-bottom: 1px solid #0d1f30;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 28px;
+  color: white;
+  margin: 0;
+  font-weight: 700;
+}
+
+header .header-subtitle {
+  font-size: 14px;
+  color: #b8d4e8;
+  margin-top: 2px;
+}
+
+header .logo-section {
+  flex: 0 0 auto;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+nav {
+  /* flex: 1 1 auto; */
+  /* margin: 0 40px; */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  gap: 32px;
+  display: flex;
+  list-style: none;
+  justify-items: center;
+  align-items: stretch;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-between;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 4px;
+}
+
+
+
+/* ============================================
+   BREADCRUMB
+   ============================================ */
+
+.breadcrumb {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+
+}
+
+.breadcrumb-list a {
+  color: #1a3a5c;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.breadcrumb-list a:hover {
+  opacity: 0.8;
+}
+
+.breadcrumb-list span {
+  color: #333;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+  background-color: #1a3a5c;
+  color: white;
+  padding: 48px 0;
+  margin-top: 64px;
+  border-top: 1px solid #0d1f30;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+}
+
+footer h3 {
+  color: white;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+footer p {
+  color: #b8d4e8;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+footer a {
+  color: #b8d4e8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: white;
+  opacity: 1;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 12px;
+}
+
+footer li a {
+  display: block;
+  padding: 4px 0;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 32px;
+  padding-top: 24px;
+  text-align: center;
+  color: #b8d4e8;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  footer .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  /* border-radius: 8px; */
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #bbb;
+}
+
+.card-header {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a3a5c;
+  margin: 0;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.card-body {
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+/* ============================================
+   BADGES & TAGS
+   ============================================ */
+
+.badge {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.badge-primary {
+  background-color: #1a3a5c;
+  color: white;
+}
+
+.badge-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.badge-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.badge-warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.badge-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+/* ============================================
+   ALERTS
+   ============================================ */
+
+.alert {
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  color: #0c5460;
+}
+
+.alert-close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  color: inherit;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+/* ============================================
+   PROGRESS BAR
+   ============================================ */
+
+.progress {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #1a3a5c;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+  background: linear-gradient(135deg, #1a3a5c 0%, #2d5a8c 100%);
+  color: white;
+  padding: 80px 24px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 48px;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  color: #b8d4e8;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.hero .cta-button {
+  background-color: white;
+  color: #1a3a5c;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.hero .cta-button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 48px 24px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+
+section {
+  margin-bottom: 48px;
+  padding: 0;
+}
+
+section>h2 {
+  margin-bottom: 24px;
+}
+
+/* ============================================
+   MODALS / DIALOGS
+   ============================================ */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 32px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+.modal-header {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a3a5c;
+  margin: 0;
+}
+
+.modal-body {
+  margin-bottom: 16px;
+}
+
+.modal-footer {
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES FOR INTERACTIONS
+   ============================================ */
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.scale-hover {
+  transition: transform 0.3s ease;
+}
+
+.scale-hover:hover {
+  transform: scale(1.02);
+}
+
+/* ============================================
+   MAIN LAYOUT
+   ============================================ */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  background-color: white;
+}
+
+/* ============================================
+   PAGE SPECIFIC STYLES
+   ============================================ */
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Course Grid */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* Two Column Layout */
+.two-column {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 1024px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+/* FIGURE */
+figure {
+  width: 100%;
+}
+
+figure>div {
+  width: 100%;
+}
+
+figure img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+
+
+
+/* =========================================================
+DIVIDERS
+========================================================= */
+
+.divider {
+  height: 1px;
+  background: #ddd;
+  margin: 24px 0;
+}

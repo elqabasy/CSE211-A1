@@ -5,18 +5,250 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <!-- @mahros -->
+  <!-- Q? If you can make the <header> and <breadcrumb> sticky, do it! -->
+
+
+
+  <!-- Header Component - header.html -->
   <header>
-    Assingment#1 Dr.Samy
+    <div class="container"
+      style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; justify-items: left;">
+      <div class="logo-section">
+        <h1>
+          EduConnect
+        </h1>
+        <p class="header-subtitle">Your Gateway to Academic Excellence</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Browse Courses</a></li>
+          <li><a href="dashboard.html">Student Dashboard</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
   </header>
-  <main>
-    <h1>Hello, World!</h1>
+
+
+
+  <!-- @mahros -->
+  <!-- Don't Change This -->
+  <div class="breadcrumb">
+    <div class="container">
+      <ul class="breadcrumb-list" role="navigation" aria-label="Breadcrumb">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <!-- @mahros -->
+        <!-- keep this commented, if there is no nested -->
+        <!-- <li>
+          <span>></span>
+        </li> -->
+        <!-- <li> -->
+        <!-- <span id="breadcrumb-current"></span> -->
+        <!-- </li> -->
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <!-- @mahros -->
+  <!-- main section -->
+  <main style="padding-top: 25px;">
+    <div class="container">
+      <div class="two-column">
+
+
+        <!-- main.column -->
+        <article>
+
+          <!-- @mahros -->
+          <!-- top section -->
+          <section>
+            <div class="header-card">Welcome to EduConnect</div>
+            <p>
+              Explore our comprehensive academic programs and start your learning journey today. Access quality
+              education
+              from
+              anywhere, anytime.
+            </p>
+          </section>
+
+
+          <section>
+            <p>Featured Courses</p>
+            <article class="card">
+              <figure class="mb-4">
+                <div>
+                  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&amp;h=400&amp;fit=crop"
+                    alt="Introduction to Computer Science" class="w-full h-full object-cover" />
+                </div>
+                <figcaption>Students collaborating on programming projects</figcaption>
+              </figure>
+              <h3>Introduction to Computer Science</h3>
+              <p>Learn the fundamentals of programming and computational thinking.</p>
+              <p>Instructor: Dr. Samy</p>
+              <p>Duration: 12 weeks</p>
+              <a href="#/course/1" data-discover="true">
+                <button>
+                  View Details
+                </button>
+              </a>
+            </article>
+          </section>
+          <section>
+            <p>Featured Courses</p>
+            <article class="card">
+              <figure class="mb-4">
+                <div>
+                  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&amp;h=400&amp;fit=crop"
+                    alt="Introduction to Computer Science" class="w-full h-full object-cover" />
+                </div>
+                <figcaption>Students collaborating on programming projects</figcaption>
+              </figure>
+              <h3>Introduction to Computer Science</h3>
+              <p>Learn the fundamentals of programming and computational thinking.</p>
+              <p>Instructor: Dr. Samy</p>
+              <p>Duration: 12 weeks</p>
+              <a href="#/course/1" data-discover="true">
+                <button>
+                  View Details
+                </button>
+              </a>
+            </article>
+          </section>
+          <section>
+            <p>Featured Courses</p>
+            <article class="card">
+              <figure class="mb-4">
+                <div>
+                  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&amp;h=400&amp;fit=crop"
+                    alt="Introduction to Computer Science" class="w-full h-full object-cover" />
+                </div>
+                <figcaption>Students collaborating on programming projects</figcaption>
+              </figure>
+              <h3>Introduction to Computer Science</h3>
+              <p>Learn the fundamentals of programming and computational thinking.</p>
+              <p>Instructor: Dr. Samy</p>
+              <p>Duration: 12 weeks</p>
+              <a href="#/course/1" data-discover="true">
+                <button>
+                  View Details
+                </button>
+              </a>
+            </article>
+          </section>
+
+
+          <!-- @mahros -->
+          <!-- IF your founded a more semantic, meaningful names for sections, do it! -->
+          <!-- OTHER SECTIONS -->
+          <section>
+            <h4>Latest Announcements
+              <span class="badge badge-info">UpToDate</span>
+            </h4>
+            <article>
+              <h6>Spring Semester Registration Open</h6>
+              <p>Date: 2025-01-15</p>
+            </article>
+            <div class="divider"></div>
+            <article>
+              <h6>New Course: Machine Learning Basics</h6>
+              <p>Date: 2025-01-10</p>
+            </article>
+            <div class="divider"></div>
+            <article>
+              <h6>Academic Calendar Updated</h6>
+              <p>Date: 2025-01-05</p>
+            </article>
+          </section>
+
+
+        </article>
+        <div style="background-color: red;">right</div>
+      </div>
+    </div>
   </main>
+
+
+
+  <!-- @mahros -->
+  <!-- NOTE: you will reuse this footer in all pages -->
   <footer>
-    <p>Created with &hearts; by <abbr title="Mahros&Karim">us</abbr></p>
+    <div class="container">
+      <!-- About Section -->
+      <div class="footer-section">
+        <h3>About EduConnect</h3>
+        <p>
+          EduConnect is a comprehensive student academic portal designed to help students
+          manage their courses, track progress, and achieve their educational goals.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Browse Courses</a></li>
+          <li><a href="dashboard.html">Student Dashboard</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="contact.html">Help & Support</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>
+          <strong>Email:</strong><br>
+          <a href="mailto:support@educonnect.edu">support@educonnect.edu</a>
+        </p>
+        <p>
+          <strong>Phone:</strong><br>
+          <a href="tel:+1234567890">+1 (234) 567-890</a>
+        </p>
+        <p>
+          <strong>Office Hours:</strong><br>
+          Monday - Friday: 9 AM - 5 PM<br>
+          Saturday - Sunday: Closed
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          &copy; 2025 EduConnect. All rights reserved. |
+          <a href="#">Privacy Policy</a> |
+          <a href="#">Terms of Service</a>
+        </p>
+      </div>
+    </div>
   </footer>
+
 </body>
 
 </html>
