@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Component Library Showcase</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* =========================================================
+   TYPOGRAPHY EXTENSIONS
+   ========================================================= */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #1a3a5c;
+      margin: 0 0 16px 0;
+      font-weight: 600;
+    }
+
+    p {
+      color: #333;
+      line-height: 1.7;
+    }
+
+    small {
+      color: #666;
+      font-size: 12px;
+    }
+
+    blockquote {
+      padding: 16px 20px;
+      background: #f5f7fa;
+      border-left: 4px solid #1a3a5c;
+      border-radius: 6px;
+      color: #333;
+      margin: 20px 0;
+    }
+
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      color: #1a3a5c;
+    }
+
+
+    /* =========================================================
+   BUTTONS — STYLE A (SOLID)
+   ========================================================= */
+
+    .button,
+    .btn {
+      display: inline-block;
+      background: #1a3a5c;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .button:hover,
+    .btn:hover {
+      background: #16324f;
+    }
+
+    .btn-secondary {
+      background: #2d5a8c;
+    }
+
+    .btn-secondary:hover {
+      background: #23496f;
+    }
+
+    .btn-danger {
+      background: #c62828;
+    }
+
+    .btn-danger:hover {
+      background: #a71f1f;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #1a3a5c;
+      border: 2px solid #1a3a5c;
+    }
+
+    .btn-outline:hover {
+      background: #e8eef5;
+    }
+
+    .btn-sm {
+      padding: 6px 14px;
+      font-size: 14px;
+    }
+
+    .btn-lg {
+      padding: 14px 28px;
+      font-size: 17px;
+    }
+
+
+    /* =========================================================
+   FORMS
+   ========================================================= */
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      transition: 0.2s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #1a3a5c;
+      box-shadow: 0 0 0 2px rgba(26, 58, 92, 0.25);
+      outline: none;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .label {
+      font-weight: 600;
+      color: #1a3a5c;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+
+    /* Checkboxes & Radios */
+    input[type="checkbox"],
+    input[type="radio"] {
+      accent-color: #1a3a5c;
+    }
+
+
+    /* =========================================================
+   TABLES
+   ========================================================= */
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background: #1a3a5c;
+      color: white;
+      font-weight: 600;
+    }
+
+    tr:hover {
+      background: #f4f7fa;
+    }
+
+
+    /* =========================================================
+   ACCORDION (Pure CSS)
+   ========================================================= */
+
+    .accordion {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .accordion-title {
+      padding: 16px;
+      background: #f5f7fa;
+      cursor: pointer;
+      font-weight: 600;
+      color: #1a3a5c;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 16px;
+      background: white;
+    }
+
+    input.accordion-toggle {
+      display: none;
+    }
+
+    input.accordion-toggle:checked+.accordion-title+.accordion-content {
+      padding: 16px;
+      max-height: 500px;
+    }
+
+
+    /* =========================================================
+   TABS (Pure CSS)
+   ========================================================= */
+
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #ddd;
+      gap: 24px;
+    }
+
+    .tab-label {
+      padding: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #1a3a5c;
+    }
+
+    .tab-label:hover {
+      opacity: 0.7;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 24px 0;
+    }
+
+    input.tab-toggle {
+      display: none;
+    }
+
+    input.tab-toggle:checked+.tab-label {
+      border-bottom: 3px solid #1a3a5c;
+    }
+
+    input.tab-toggle:checked+.tab-label+.tab-content {
+      display: block;
+    }
+
+
+    /* =========================================================
+   DROPDOWN (Pure CSS)
+   ========================================================= */
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-toggle {
+      cursor: pointer;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 110%;
+      left: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 12px 0;
+      min-width: 180px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-item {
+      padding: 10px 16px;
+      color: #1a3a5c;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-item:hover {
+      background: #f5f7fa;
+    }
+
+    input.dropdown-toggle {
+      display: none;
+    }
+
+    input.dropdown-toggle:checked+.dropdown-menu {
+      display: block;
+    }
+
+
+    /* =========================================================
+   PAGINATION
+   ========================================================= */
+
+    .pagination {
+      display: flex;
+      gap: 8px;
+    }
+
+    .page {
+      padding: 8px 14px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      text-decoration: none;
+      color: #1a3a5c;
+    }
+
+    .page:hover {
+      background: #e9eef5;
+    }
+
+    .page.active {
+      background: #1a3a5c;
+      color: white;
+    }
+
+
+    /* =========================================================
+   TOASTS (Pure CSS, uses :target)
+   ========================================================= */
+
+    .toast {
+      position: fixed;
+      top: 20px;
+      right: -400px;
+      background: #1a3a5c;
+      color: white;
+      padding: 16px 24px;
+      border-radius: 6px;
+      transition: 0.4s ease;
+    }
+
+    .toast:target {
+      right: 20px;
+    }
+
+    .toast-close {
+      color: white;
+      margin-left: 12px;
+      opacity: 0.7;
+    }
+
+
+    /* =========================================================
+   TAGS / CHIPS
+   ========================================================= */
+
+    .tag {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: #e9eef5;
+      color: #1a3a5c;
+      font-size: 13px;
+      margin: 4px;
+      font-weight: 500;
+    }
+
+
+    /* =========================================================
+   AVATARS
+   ========================================================= */
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #d9e3f0;
+      display: inline-block;
+    }
+
+    .avatar-group {
+      display: flex;
+    }
+
+    .avatar-group .avatar {
+      margin-left: -10px;
+      border: 2px solid white;
+    }
+
+
+    /* =========================================================
+   TIMELINE
+   ========================================================= */
+
+    .timeline {
+      border-left: 3px solid #1a3a5c;
+      padding-left: 20px;
+    }
+
+    .timeline-item {
+      margin-bottom: 24px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      background: #1a3a5c;
+      border-radius: 50%;
+      position: absolute;
+      margin-left: -27px;
+      margin-top: 3px;
+    }
+
+
+    /* =========================================================
+   DIVIDERS
+   ========================================================= */
+
+    .divider {
+      height: 1px;
+      background: #ddd;
+      margin: 24px 0;
+    }
+
+
+    /* =========================================================
+   SPACERS
+   ========================================================= */
+
+    .space-sm {
+      height: 12px;
+    }
+
+    .space-md {
+      height: 24px;
+    }
+
+    .space-lg {
+      height: 48px;
+    }
+
+    /* END OF EXTENDED COMPONENTS */
+
+
+    /* Inline helper styles for code blocks only */
+    pre {
+      background: #f5f7fa;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      border: 1px solid #e0e0e0;
+    }
+
+    code {
+      font-family: monospace;
+      white-space: pre;
+    }
+
+    .section {
+      margin-bottom: 80px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo-section">
+        <h1>UI Components Library</h1>
+        <div class="header-subtitle">HTML + CSS only — All components included</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ========================================================= -->
+    <!-- HERO -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Hero</h2>
+
+      <div class="hero">
+        <h1>Welcome to the UI Kit</h1>
+        <p>This is the default hero section styled by your CSS system.</p>
+        <a class="cta-button" href="#">Get Started</a>
+      </div>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;div class="hero"&gt;
+  &lt;h1&gt;Welcome to the UI Kit&lt;/h1&gt;
+  &lt;p&gt;This is the default hero section styled by your CSS system.&lt;/p&gt;
+  &lt;a class="cta-button" href="#"&gt;Get Started&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+
+
+    <!-- ========================================================= -->
+    <!-- BUTTONS -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Buttons</h2>
+
+      <p>
+        <a class="btn">Primary Button</a>
+        <a class="btn btn-secondary">Secondary</a>
+        <a class="btn btn-danger">Danger</a>
+        <a class="btn btn-outline">Outline</a>
+        <a class="btn btn-sm">Small</a>
+        <a class="btn btn-lg">Large</a>
+      </p>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;a class="btn"&gt;Primary Button&lt;/a&gt;
+&lt;a class="btn btn-secondary"&gt;Secondary&lt;/a&gt;
+&lt;a class="btn btn-danger"&gt;Danger&lt;/a&gt;
+&lt;a class="btn btn-outline"&gt;Outline&lt;/a&gt;
+&lt;a class="btn btn-sm"&gt;Small&lt;/a&gt;
+&lt;a class="btn btn-lg"&gt;Large&lt;/a&gt;</code></pre>
+    </section>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- FORMS -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Form Elements</h2>
+
+      <form>
+        <div class="form-group">
+          <label class="label">Text Input</label>
+          <input type="text" placeholder="Enter text..." />
+        </div>
+
+        <div class="form-group">
+          <label class="label">Select</label>
+          <select>
+            <option>Choose...</option>
+            <option>Option A</option>
+            <option>Option B</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="label">Textarea</label>
+          <textarea placeholder="Type here..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" /> Enable Feature
+          </label>
+          <br />
+          <label>
+            <input type="radio" name="r" /> Option 1
+          </label>
+          <label>
+            <input type="radio" name="r" /> Option 2
+          </label>
+        </div>
+      </form>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;div class="form-group"&gt;
+  &lt;label class="label"&gt;Text Input&lt;/label&gt;
+  &lt;input type="text" placeholder="Enter text..." /&gt;
+&lt;/div&gt;
+
+&lt;div class="form-group"&gt;
+  &lt;label class="label"&gt;Select&lt;/label&gt;
+  &lt;select&gt;
+    &lt;option&gt;Choose...&lt;/option&gt;
+    &lt;option&gt;Option A&lt;/option&gt;
+    &lt;option&gt;Option B&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class="form-group"&gt;
+  &lt;label class="label"&gt;Textarea&lt;/label&gt;
+  &lt;textarea placeholder="Type here..."&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+
+&lt;label&gt;&lt;input type="checkbox"&gt; Enable Feature&lt;/label&gt;
+&lt;label&gt;&lt;input type="radio" name="r"&gt; Option 1&lt;/label&gt;
+&lt;label&gt;&lt;input type="radio" name="r"&gt; Option 2&lt;/label&gt;
+</code></pre>
+    </section>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- TABLES -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Tables</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Status</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alpha</td>
+            <td>Active</td>
+            <td>42</td>
+          </tr>
+          <tr>
+            <td>Beta</td>
+            <td>Pending</td>
+            <td>17</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Item&lt;/th&gt;
+      &lt;th&gt;Status&lt;/th&gt;
+      &lt;th&gt;Value&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alpha&lt;/td&gt;
+      &lt;td&gt;Active&lt;/td&gt;
+      &lt;td&gt;42&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Beta&lt;/td&gt;
+      &lt;td&gt;Pending&lt;/td&gt;
+      &lt;td&gt;17&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+    </section>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- ACCORDION -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Accordion (Pure CSS)</h2>
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <input class="accordion-toggle" type="checkbox" id="acc1" />
+          <label class="accordion-title" for="acc1">Accordion Item 1</label>
+          <div class="accordion-content">
+            <p>This is inside the accordion content section.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input class="accordion-toggle" type="checkbox" id="acc2" />
+          <label class="accordion-title" for="acc2">Accordion Item 2</label>
+          <div class="accordion-content">
+            <p>More sample content.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;div class="accordion"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;input class="accordion-toggle" type="checkbox" id="acc1"&gt;
+    &lt;label for="acc1" class="accordion-title"&gt;Accordion Item 1&lt;/label&gt;
+    &lt;div class="accordion-content"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- TABS -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Tabs (Pure CSS)</h2>
+
+      <div>
+        <input type="radio" name="tab" id="tab1" class="tab-toggle" checked />
+        <label for="tab1" class="tab-label">Tab 1</label>
+        <div class="tab-content">
+          <p>This is tab one.</p>
+        </div>
+
+        <input type="radio" name="tab" id="tab2" class="tab-toggle" />
+        <label for="tab2" class="tab-label">Tab 2</label>
+        <div class="tab-content">
+          <p>This is tab two.</p>
+        </div>
+      </div>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;input type="radio" class="tab-toggle" name="tab" id="tab1" checked&gt;
+&lt;label class="tab-label" for="tab1"&gt;Tab 1&lt;/label&gt;
+&lt;div class="tab-content"&gt;...&lt;/div&gt;
+
+&lt;input type="radio" class="tab-toggle" name="tab" id="tab2"&gt;
+&lt;label class="tab-label" for="tab2"&gt;Tab 2&lt;/label&gt;
+&lt;div class="tab-content"&gt;...&lt;/div&gt;
+</code></pre>
+    </section>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- DROPDOWN -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Dropdown (Pure CSS)</h2>
+
+      <div class="dropdown">
+        <input type="checkbox" class="dropdown-toggle" id="dd1" />
+        <label class="btn" for="dd1">Open Menu</label>
+
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Item 1</a>
+          <a class="dropdown-item" href="#">Item 2</a>
+          <a class="dropdown-item" href="#">Item 3</a>
+        </div>
+      </div>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;div class="dropdown"&gt;
+  &lt;input type="checkbox" id="dd1" class="dropdown-toggle"&gt;
+  &lt;label for="dd1" class="btn"&gt;Open Menu&lt;/label&gt;
+  &lt;div class="dropdown-menu"&gt;
+    &lt;a class="dropdown-item"&gt;Item 1&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </section>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- PAGINATION -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Pagination</h2>
+
+      <div class="pagination">
+        <a class="page">&laquo;</a>
+        <a class="page active">1</a>
+        <a class="page">2</a>
+        <a class="page">3</a>
+        <a class="page">&raquo;</a>
+      </div>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;div class="pagination"&gt;
+  &lt;a class="page"&gt;&amp;laquo;&lt;/a&gt;
+  &lt;a class="page active"&gt;1&lt;/a&gt;
+  &lt;a class="page"&gt;2&lt;/a&gt;
+  &lt;a class="page"&gt;3&lt;/a&gt;
+  &lt;a class="page"&gt;&amp;raquo;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- TAGS / CHIPS -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Tags / Chips</h2>
+
+      <p>
+        <span class="tag">Design</span>
+        <span class="tag">UI</span>
+        <span class="tag">Component</span>
+        <span class="tag">System</span>
+      </p>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;span class="tag"&gt;Design&lt;/span&gt;
+&lt;span class="tag"&gt;UI&lt;/span&gt;
+&lt;span class="tag"&gt;Component&lt;/span&gt;
+&lt;span class="tag"&gt;System&lt;/span&gt;</code></pre>
+    </section>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- AVATARS -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Avatars</h2>
+
+      <div>
+        <div class="avatar"></div>
+        <div class="avatar-group">
+          <div class="avatar"></div>
+          <div class="avatar"></div>
+          <div class="avatar"></div>
+        </div>
+      </div>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;div class="avatar"&gt;&lt;/div&gt;
+
+&lt;div class="avatar-group"&gt;
+  &lt;div class="avatar"&gt;&lt;/div&gt;
+  &lt;div class="avatar"&gt;&lt;/div&gt;
+  &lt;div class="avatar"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- TIMELINE -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Timeline</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Event One</h4>
+          <p>Description about event one.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Event Two</h4>
+          <p>Description of another event.</p>
+        </div>
+      </div>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;div class="timeline"&gt;
+  &lt;div class="timeline-item"&gt;
+    &lt;h4&gt;Event One&lt;/h4&gt;
+    &lt;p&gt;Description...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- DIVIDER -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Divider</h2>
+
+      <div class="divider"></div>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;div class="divider"&gt;&lt;/div&gt;</code></pre>
+    </section>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- TOAST (Pure CSS :target) -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Toast (Pure CSS)</h2>
+
+      <p><a class="btn" href="#toast1">Show Toast</a></p>
+
+      <div id="toast1" class="toast">
+        Toast message active.
+        <a class="toast-close" href="#">✕</a>
+      </div>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;a href="#toast1" class="btn"&gt;Show Toast&lt;/a&gt;
+
+&lt;div id="toast1" class="toast"&gt;
+  Toast message active.
+  &lt;a class="toast-close" href="#"&gt;✕&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+    </section>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- SPACERS -->
+    <!-- ========================================================= -->
+    <section class="section">
+      <h2>Spacers</h2>
+
+      <div style="background:#eee;">Above</div>
+      <div class="space-md"></div>
+      <div style="background:#eee;">Below</div>
+
+      <h3>HTML Code</h3>
+      <pre><code>&lt;div class="space-md"&gt;&lt;/div&gt;</code></pre>
+    </section>
+
+
+  </main>
+
+
+
+  <footer>
+    <div class="container">
+      <div>
+        <h3>About This UI Kit</h3>
+        <p>A pure HTML + CSS component set for rapid development.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 UI Kit Demo
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!-- Footer Component - footer.html -->
+<footer>
+  <div class="container">
+    <!-- About Section -->
+    <div class="footer-section">
+      <h3>About EduConnect</h3>
+      <p>
+        EduConnect is a comprehensive student academic portal designed to help students
+        manage their courses, track progress, and achieve their educational goals.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Browse Courses</a></li>
+        <li><a href="dashboard.html">Student Dashboard</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Support -->
+    <div class="footer-section">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="contact.html">Help & Support</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Accessibility</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>
+        <strong>Email:</strong><br>
+        <a href="mailto:support@educonnect.edu">support@educonnect.edu</a>
+      </p>
+      <p>
+        <strong>Phone:</strong><br>
+        <a href="tel:+1234567890">+1 (234) 567-890</a>
+      </p>
+      <p>
+        <strong>Office Hours:</strong><br>
+        Monday - Friday: 9 AM - 5 PM<br>
+        Saturday - Sunday: Closed
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <p>
+        &copy; 2025 EduConnect. All rights reserved. |
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /**
+   * Footer initialization and utilities
+   */
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Set current year in footer if needed
+    const currentYear = new Date().getFullYear();
+    const footerText = document.querySelector('.footer-bottom p');
+    if (footerText) {
+      footerText.textContent = footerText.textContent.replace('2025', currentYear);
+    }
+  });
+</script>

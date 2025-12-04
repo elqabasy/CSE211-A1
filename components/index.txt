@@ -1,0 +1,3 @@
+Components are just a notes for us to store components structure, so:
+  - we can easily copy and paste them into any place.
+  - prevent team convusion
